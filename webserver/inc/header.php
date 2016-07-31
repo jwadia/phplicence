@@ -7,8 +7,6 @@ $username = $_SESSION['username'];
 if (($_SESSION['rank']) == "0") {
 	die(header("Location: email.php"));
 }
-
-
 ?>
 
 <meta charset="utf-8">
@@ -40,6 +38,7 @@ if (($_SESSION['rank']) == "0") {
 					<ul class="dropdown-menu">
 						<li><a href="/newproject.php">New Project</a></li>
 						<li><a href="/viewproject.php">View Projects</a></li>
+						<li><a href="/manageproject.php">Manage Projects</a></li>
 						<li><a href="/manageproject.php">Manage Projects</a></li>
 					</ul>
 				</li>
