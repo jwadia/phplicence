@@ -36,9 +36,9 @@ if (($_SESSION['rank']) == "0") {
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects
 					<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="/newproject.php">New Project</a></li>
-						<li><a href="/viewproject.php">View Projects</a></li>
-						<li><a href="/manageproject.php">Manage Projects</a></li>
+						<li><a href="newproject.php">New Project</a></li>
+						<li><a href="viewproject.php">View Projects</a></li>
+						<li><a href="manageproject.php">Manage Projects</a></li>
 					</ul>
 				</li>
 				<?php
