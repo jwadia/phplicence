@@ -32,14 +32,14 @@ include 'inc/header.php';
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-danger m-bottom-md">
 				<div class="statistic-title">
-					Credits
+					Projects
 				</div>
 
 				<div class="statistic-value">
 					<?php echo $credits; ?>
 				</div>
 
-				<div class="m-top-md">Number Of Active Credits</div>
+				<div class="m-top-md">Number Of Active Projects</div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-eye"></i>
@@ -50,7 +50,7 @@ include 'inc/header.php';
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-info m-bottom-md">
 				<div class="statistic-title">
-					Downloaded
+					Total Licences
 				</div>
 
 				<div class="statistic-value">
@@ -60,7 +60,7 @@ include 'inc/header.php';
 					?>
 				</div>
 
-				<div class="m-top-md">Assignments Downloaded</div>
+				<div class="m-top-md">Total Licences Distributed</div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-stats-bars"></i>
@@ -71,7 +71,7 @@ include 'inc/header.php';
 		<div class="col-lg-3 col-sm-6">
 			<div class="statistic-box bg-warning m-bottom-md">
 				<div class="statistic-title">
-					Uploaded
+					Join Date
 				</div>
 
 				<div class="statistic-value">
@@ -81,7 +81,7 @@ include 'inc/header.php';
 					?>
 				</div>
 
-				<div class="m-top-md">Assignments Uploaded</div>
+				<div class="m-top-md">User Join Date</div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-person-add"></i>
@@ -97,7 +97,7 @@ include 'inc/header.php';
 				<div class="statistic-value">
 					Yes
 				</div>
-				<div class="top-md">Basic Plan</div>
+				<div class="top-md">Free Plan</div>
 
 				<div class="statistic-icon-background">
 					<i class="ion-ios7-cart-outline"></i>
