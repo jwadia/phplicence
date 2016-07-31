@@ -36,7 +36,10 @@ include 'inc/header.php';
 				</div>
 
 				<div class="statistic-value">
-					<?php echo $credits; ?>
+					<?php
+					$results = $con->query("SELECT * FROM purchases WHERE username = '" . $username . "'");
+					echo mysqli_num_rows($results);
+					?>
 				</div>
 
 				<div class="m-top-md">Number Of Active Projects</div>
@@ -76,8 +79,10 @@ include 'inc/header.php';
 
 				<div class="statistic-value">
 					<?php
-					$results = $con->query("SELECT * FROM assignments WHERE status = 1 AND username = '" . $username . "'");
-					echo mysqli_num_rows($results);
+					$results = $con->query("SELECT date FROM `users` WHERE username = '" . $username . "'");
+					while($row = $results->fetch_assoc()) {
+						echo $row["date"];
+					}
 					?>
 				</div>
 
