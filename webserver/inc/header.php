@@ -7,6 +7,8 @@ $username = $_SESSION['username'];
 if (($_SESSION['rank']) == "0") {
 	die(header("Location: email.php"));
 }
+
+
 ?>
 
 <meta charset="utf-8">
@@ -26,12 +28,21 @@ if (($_SESSION['rank']) == "0") {
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="index.php" class="navbar-brand"><img src="#"></img></a>
+			<a href="index.php" class="navbar-brand">PHPLICENCE</a>
 		</div>
 		<!--MENU ITEMS-->
 		<div class="collapse navbar-collapse" id="mainNavBar">
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Dashboard</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="/newproject.php">New Project</a></li>
+						<li><a href="/viewproject.php">View Projects</a></li>
+						<li><a href="/manageproject.php">Manage Projects</a></li>
+					</ul>
+				</li>
 				<?php
 				if (($_SESSION['rank']) == "5") {
 					echo '
