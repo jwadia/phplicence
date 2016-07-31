@@ -39,7 +39,6 @@ if (($_SESSION['rank']) == "0") {
 						<li><a href="/newproject.php">New Project</a></li>
 						<li><a href="/viewproject.php">View Projects</a></li>
 						<li><a href="/manageproject.php">Manage Projects</a></li>
-						<li><a href="/manageproject.php">Manage Projects</a></li>
 					</ul>
 				</li>
 				<?php
