@@ -49,7 +49,7 @@ include 'inc/header.php';
 				<thead>
 				<tr>
 				  <th>Project</th>
-				  <th>Licences Distrobuted</th>
+				  <th>Licences Distributed</th>
 				  <th>Secret Key</th>
 				</tr>
 			  </thead>
