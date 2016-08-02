@@ -59,5 +59,4 @@ if(mysqli_num_rows($results)>0){
 		echo '</div></div></div>';
 }
 ?>
-</div>
 </html>

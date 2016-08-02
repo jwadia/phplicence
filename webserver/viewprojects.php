@@ -18,7 +18,7 @@ include 'inc/header.php';
 ?>
 
 <html>
-<title> View Project | PHPLICENCE </title>
+<title> View Projects | PHPLICENCE </title>
 <div class="mainHeader">
 	<div class="container">
 		<div class="row">
