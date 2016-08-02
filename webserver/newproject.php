@@ -9,20 +9,44 @@ echo '
 ';
 exit();
 }
-
+$username = $_SESSION['username'];
 $date = date("Y-m-d");
+
+
+include 'inc/database.php';
+$status = mysqli_real_escape_string($con, htmlspecialchars($_GET['name']));
+if ($status != '') {
+	$key=MD5(microtime());
+	$sql = mysqli_query($con, "INSERT INTO `projects` (secret_key, username, name) VALUES ('$key', '$username', '$status')") or die(mysqli_error($con));
+
+	if($sql){
+		die(header("Location: viewprojects.php?action=added"));
+	}
+}
 
 include 'inc/header.php';
 ?>
 
 <html>
+<title> New Project | PHPLICENCE </title>
 <div class="mainHeader">
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 clearfix">
-				<h1>Dashboard</h1>
+				<h1>Add New Project</h1>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="col-xs-6">
+		<form action="newproject.php" method="get">
+		  <div class="form-group">
+			<label for="name">Name:</label>
+			<input type="text" class="form-control" id="name" name="name">
+		  </div>
+		  <button id="submit" value="submit" type="submit" class="btn btn-default">Submit</button>
+		</form>
 	</div>
 </div>
 </html>
