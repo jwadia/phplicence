@@ -30,6 +30,9 @@ $id = mysqli_real_escape_string($con, htmlspecialchars($_GET['id']));
 		</div>
 	</div>
 </div>
+<div class="container padding-bottom-10">
+	<button type="button" class="btn btn-info btn-xl" data-toggle="modal" data-target="#addlicence">Add Licence</button>
+</div>
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
@@ -46,6 +49,7 @@ $id = mysqli_real_escape_string($con, htmlspecialchars($_GET['id']));
 				</tr>
 			  </thead>
 			  <tbody>
+			  </html>
 <?php
 $results = $con->query("SELECT  id, website, serverip, licencekey, status, dateissued, expirationdate FROM licences WHERE projectid = '" . $id .  "' AND username = '". $username ."'");
 
@@ -73,4 +77,35 @@ if(mysqli_num_rows($results)>0){
 		echo '</div></div></div>';
 }
 ?>
+<html>
+<br>
+<br>
+<!-- Modal content-->
+<div id="addlicence" class="modal fade" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	<h4 class="modal-title">Add Licence</h4>
+  </div>
+  <div class="modal-body">
+	<form action="addlicence.php" method="POST">
+	<div class="forum-group padding-top-10">
+		<input type="text" class="form-control" id="url" name="url" minlength="4" placeholder="Website Url" required>
+	</div>
+	<div class="forum-group padding-top-10">
+		<input type="text" class="form-control" id="date" name="date" placeholder="Expiration date (mm/dd/yyyy)" required>
+	</div>
+	<br />
+	<div class="forum-group">
+		<input type="submit" id="submit" class="btn btn-lg btn-success btn-block" value="Add"/>
+	</div>
+</form>
+  </div>
+  <div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</div>
+
+</div>
 </html>
