@@ -89,12 +89,15 @@ if(mysqli_num_rows($results)>0){
 	<h4 class="modal-title">Add Licence</h4>
   </div>
   <div class="modal-body">
-	<form action="addlicence.php" method="POST">
+	<form action="addlicence.php?id=<?php 
+	$id = mysqli_real_escape_string($con, htmlspecialchars($_GET['id']));
+	echo $id;
+	?>" method="POST">
 	<div class="forum-group padding-top-10">
 		<input type="text" class="form-control" id="url" name="url" minlength="4" placeholder="Website Url" required>
 	</div>
 	<div class="forum-group padding-top-10">
-		<input type="text" class="form-control" id="date" name="date" placeholder="Expiration date (mm/dd/yyyy)" required>
+		<input type="text" class="form-control" id="date" name="date" placeholder="Expiration date (mm/dd/yy)" required>
 	</div>
 	<br />
 	<div class="forum-group">
