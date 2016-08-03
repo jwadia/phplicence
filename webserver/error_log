@@ -1,0 +1,2 @@
+[03-Aug-2016 16:20:51 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/outragehosting/public_html/templates/phplicence/viewprojects.php on line 67
+[03-Aug-2016 16:22:04 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/outragehosting/public_html/templates/phplicence/viewprojects.php on line 67
