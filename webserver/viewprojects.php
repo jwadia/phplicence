@@ -55,15 +55,16 @@ include 'inc/header.php';
 			  </thead>
 			  <tbody>
 <?php
-$results = $con->query("SELECT  name, secret_key FROM projects WHERE username = '" . $username .  "'");
+$results = $con->query("SELECT * FROM projects WHERE username = '" . $username .  "'");
 
 if(mysqli_num_rows($results)>0){
 	$i=0;
 		while($row = $results->fetch_assoc()) {
 			$name = $row['name'];
+			$id = $row['id'];
 			$secret_key = $row['secret_key'];
-			$licences = 0;
-			$i++;
+			$results2 = $con->query("SELECT * FROM licences WHERE projectid = '". $id ."'");
+			$licences = mysqli_num_rows($results2);
 			echo '<tr>';
 			echo '<th scope="row">' . $name . '</th>';
 			echo '<th>' . $licences . '</th>';

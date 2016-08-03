@@ -19,7 +19,7 @@ include 'inc/database.php';
 $url = mysqli_real_escape_string($con, htmlspecialchars($_POST['url']));
 $date = mysqli_real_escape_string($con, htmlspecialchars($_POST['date']));
 $dateissued = date("m/d/y");
-$ip = gethostbyname('outragehost.com');
+$ip = gethostbyname(mysqli_real_escape_string($con, htmlspecialchars($_POST['url'])));
 $licencekey = "OWNED-" . MD5(microtime());
 $id = mysqli_real_escape_string($con, htmlspecialchars($_GET['id']));
 

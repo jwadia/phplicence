@@ -58,7 +58,7 @@ include 'inc/header.php';
 
 				<div class="statistic-value">
 					<?php
-					$results = $con->query("SELECT * FROM purchases WHERE username = '" . $username . "'");
+					$results = $con->query("SELECT * FROM licences WHERE username = '" . $username . "'");
 					echo mysqli_num_rows($results);
 					?>
 				</div>

@@ -1,9 +1,9 @@
 <?php
 
 $myhost = "localhost";
-$myuser = "phplicence_user";
-$mypass = "C{vG{A+;,@OV";
-$mydb = "phplicence";
+$myuser = "XXX";
+$mypass = "XXX";
+$mydb = "XXX";
 
 $con = mysqli_connect($myhost, $myuser, $mypass, $mydb);
 
