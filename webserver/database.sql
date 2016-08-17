@@ -92,8 +92,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `uuid`, `username`, `password`, `email`, `rank`, `ip`, `date`) VALUES
-(37, 'afc8f95ad8e45da0062800771c268978', 'TheSocomj', '3917dd537c98056ad129fdae4429f117', 'thesocomj@gmail.com', 5, '50.101.93.187', '2016-07-11'),
-(38, 'ef774c9f186de5919b0e5fc47acf0cfc', 'Vlad Reble', '9a44a639a59881b94da7c9b6d667cf1c', 'jordan.scrivo@gmail.com', 1, '74.15.22.91', '2016-07-15');
+(37, 'afc8f95ad8e45da0062800771c268978', '--', '--', '--', 5, '--', '2016-07-11'),
+(38, 'ef774c9f186de5919b0e5fc47acf0cfc', '--', '--', '--', 1, '--', '2016-07-15');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
