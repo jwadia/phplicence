@@ -16,8 +16,9 @@ $date = date("Y-m-d");
 include 'inc/database.php';
 $status = mysqli_real_escape_string($con, htmlspecialchars($_GET['name']));
 if ($status != '') {
-	$key=MD5(microtime());
-	$sql = mysqli_query($con, "INSERT INTO `projects` (secret_key, username, name) VALUES ('$key', '$username', '$status')") or die(mysqli_error($con));
+	$secret_key=MD5(microtime());
+	$public_key=MD5(microtime());
+	$sql = mysqli_query($con, "INSERT INTO `projects` (secret_key, public_key, username, name) VALUES ('$secret_key', '$public_key', '$username', '$status')") or die(mysqli_error($con));
 
 	if($sql){
 		die(header("Location: viewprojects.php?action=added"));
