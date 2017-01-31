@@ -1,9 +1,9 @@
 <?php
 
 $myhost = "localhost";
-$myuser = "XXX";
-$mypass = "XXX";
-$mydb = "XXX";
+$myuser = "thesocom_user";
+$mypass = "Heya1234$";
+$mydb = "thesocom_phplicence";
 
 $con = mysqli_connect($myhost, $myuser, $mypass, $mydb);
 

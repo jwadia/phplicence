@@ -51,7 +51,7 @@ body {
 			echo '
 			<div class="alert alert-success fade in">
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<strong>Success!</strong><br>You have successfully registered for the Exchange Homework Network!
+				<strong>Success!</strong><br>You have successfully registered to PHPLicence!
 			</div>
 			';
 		}
@@ -72,10 +72,10 @@ body {
 			<div class="panel-body"> 
 			<form action="lib/login.php" method="POST">
 				<div class="forum-group">
-					<input type="text" class="form-control" id="username" name="username"  placeholder="Username">
+					<input type="text" class="form-control" id="username" name="username"  placeholder="Username" value="admin">
 				</div>
 				<div class="forum-group padding-top-10">
-					<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+					<input type="password" class="form-control" id="password" name="password" placeholder="Password" value="test">
 				</div>
 				<br />
 				<div class="forum-group">
