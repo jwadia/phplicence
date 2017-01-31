@@ -2,7 +2,7 @@
 $licence = file('licence.txt');
 $config = file('config.txt');
 
-$xml=simplexml_load_file("https://outragehost.com/templates/phplicence/api/api.php?key=". $config[0] ."&licence=". $licence[0] ."") or die(header("Location: ../licence.php"));
+$xml=simplexml_load_file("http://jehanwadia.ca/phplicence/webserver/api/api.php?key=". $config[0] ."&licence=". $licence[0] ."") or die(header("Location: ../licence.php"));
 $serverip = $xml->serverip;
 $website = $xml->website;
 $licencekey = $xml->licencekey;
@@ -14,4 +14,5 @@ if ($_SERVER['SERVER_ADDR'] != $serverip) {
 	die(header("Location: ../licence.php"));
 }
 
+echo "Key Valid!"
 ?>
